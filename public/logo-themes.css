@@ -1,0 +1,77 @@
+/* HidayaLab Logo Theme Styles */
+
+/* Base logo styles */
+.hidayalab-logo {
+  max-width: 200px;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+/* Light theme - default */
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+/* Dark theme styles */
+@media (prefers-color-scheme: dark) {
+  .logo-light {
+    display: none;
+  }
+  
+  .logo-dark {
+    display: block;
+  }
+}
+
+/* Manual theme switching classes */
+.theme-dark .logo-light {
+  display: none;
+}
+
+.theme-dark .logo-dark {
+  display: block;
+}
+
+.theme-light .logo-light {
+  display: block;
+}
+
+.theme-light .logo-dark {
+  display: none;
+}
+
+/* SVG-based theme switching using CSS custom properties */
+.adaptive-logo {
+  --crescent-color: #666666;
+  --mosque-color: #555555;
+  --circuit-color: #444444;
+  --text-color: #333333;
+  --bg-opacity: 0.1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .adaptive-logo {
+    --crescent-color: #cccccc;
+    --mosque-color: #aaaaaa;
+    --circuit-color: #999999;
+    --text-color: #bbbbbb;
+    --bg-opacity: 0.2;
+  }
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .hidayalab-logo {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hidayalab-logo {
+    max-width: 120px;
+  }
+}
