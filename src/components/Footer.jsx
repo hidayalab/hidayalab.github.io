@@ -18,7 +18,7 @@ export default function Footer() {
     {
       title: t.footer.connectTitle,
       items: [
-        { name: 'assalamu@hidayasoft.com', href: 'mailto:assalamu@hidayasoft.com' },
+        { name: 'hidayasoft@gmail.com', href: 'mailto:hidayasoft@gmail.com' },
         { name: 'About', href: '#about' },
         { name: 'Impact', href: '#impact' },
         { name: 'Contact', href: '#contact' },

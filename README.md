@@ -112,7 +112,7 @@ We welcome contributions from developers, designers, and community members who s
 
 ## 📧 Contact
 
-- **Email**: [assalamu@hidayasoft.com](mailto:assalamu@hidayasoft.com)
+- **Email**: [hidayasoft@gmail.com](mailto:hidayasoft@gmail.com)
 - **Website**: [hidayasoft.com](https://hidayasoft.com)
 
 ## 📜 Values & Mission

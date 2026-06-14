@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import Reveal from './Reveal'
 import { useLanguage } from '../contexts/LanguageContext'
 
-const EMAIL = 'assalamu@hidayasoft.com'
+const EMAIL = 'hidayasoft@gmail.com'
 
 export default function Contact() {
   const { t } = useLanguage()
