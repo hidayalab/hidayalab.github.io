@@ -2,19 +2,21 @@ import { ThemeProvider } from './contexts/ThemeContext'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
-import Projects from './components/Projects'
+import Products from './components/Products'
+import Impact from './components/Impact'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-primary-900 transition-colors duration-300">
+      <div className="min-h-screen bg-white dark:bg-ink-950 text-ink-900 dark:text-ink-100 transition-colors duration-300">
         <Header />
         <main>
           <Hero />
           <About />
-          <Projects />
+          <Products />
+          <Impact />
           <Contact />
         </main>
         <Footer />

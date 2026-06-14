@@ -13,7 +13,7 @@ export const useTheme = () => {
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
     // Check for saved theme preference or default to system preference
-    const savedTheme = localStorage.getItem('hidayalab-theme')
+    const savedTheme = localStorage.getItem('hidayasoft-theme')
     if (savedTheme) {
       return savedTheme
     }
@@ -28,7 +28,7 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     // Save theme preference
-    localStorage.setItem('hidayalab-theme', theme)
+    localStorage.setItem('hidayasoft-theme', theme)
     
     // Apply theme to document
     const root = document.documentElement
@@ -44,7 +44,7 @@ export const ThemeProvider = ({ children }) => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     const handleChange = (e) => {
       // Only auto-switch if no manual preference is saved
-      const savedTheme = localStorage.getItem('hidayalab-theme')
+      const savedTheme = localStorage.getItem('hidayasoft-theme')
       if (!savedTheme) {
         setTheme(e.matches ? 'dark' : 'light')
       }

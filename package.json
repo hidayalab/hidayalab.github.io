@@ -1,9 +1,9 @@
 {
-  "name": "hidayalab-website",
+  "name": "hidayasoft-website",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
-  "homepage": "https://hidayalab.github.io",
+  "homepage": "https://hidayasoft.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -1,92 +1,112 @@
-import { Heart, Shield, Zap } from 'lucide-react'
+import { Heart, ShieldCheck, Sparkles, Users } from 'lucide-react'
+import Reveal from './Reveal'
 
 export default function About() {
   const values = [
     {
       icon: Heart,
-      title: 'Faith-First Development',
-      description: 'Every line of code we write is guided by Islamic principles and values, ensuring our products align with the faith.'
+      title: 'Faith-first',
+      description:
+        'Every product is built to respect Islamic values and ethics — beneficial, halal, and sincere in intention.',
     },
     {
-      icon: Shield,
-      title: 'Trust & Privacy',
-      description: 'We prioritize user privacy and data security, following the highest standards of digital ethics and transparency.'
+      icon: ShieldCheck,
+      title: 'Trust & privacy',
+      description:
+        'We protect our users with privacy-first design and the highest standards of digital amanah (trust).',
     },
     {
-      icon: Zap,
-      title: 'Innovation & Excellence',
-      description: 'We strive for excellence in everything we build, combining innovation with the wisdom of Islamic teachings.'
-    }
+      icon: Sparkles,
+      title: 'Excellence (Ihsan)',
+      description:
+        'We pursue ihsan in craft — modern, smooth, and reliable software that people love to use.',
+    },
+    {
+      icon: Users,
+      title: 'For the Ummah',
+      description:
+        'We build for real needs of the community, and give back through charity with every step forward.',
+    },
   ]
 
   return (
     <section id="about" className="section-padding section-alt">
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            About HidayaLab
+        <Reveal className="text-center max-w-3xl mx-auto mb-16">
+          <span className="eyebrow mb-4">About HidayaSoft</span>
+          <h2 className="heading-xl text-3xl md:text-5xl mb-5">
+            Building <span className="text-gradient">digital solutions</span> for the Ummah
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            We are a digital Islamic technology company dedicated to creating software solutions 
-            that serve the Muslim community while upholding the highest standards of faith and innovation.
+          <p className="text-lg text-ink-600 dark:text-ink-300">
+            HidayaSoft is a faith-conscious software studio. We craft modern tools that solve real
+            problems for Muslim individuals, businesses, schools, and charities — and we channel part
+            of our income back to the community through Amana Fund.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Our Mission</h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              At HidayaLab, we believe technology should serve humanity while respecting divine guidance. 
-              Our mission is to bridge the gap between modern digital solutions and Islamic values, 
-              creating tools that empower individuals and strengthen communities.
+          <Reveal>
+            <h3 className="font-display font-bold text-2xl text-ink-900 dark:text-white mb-5">
+              Our mission
+            </h3>
+            <p className="text-ink-600 dark:text-ink-300 mb-5">
+              We believe technology should serve humanity while honouring divine guidance. Our journey
+              began with <span className="font-semibold text-primary-700 dark:text-primary-300">Amana Fund</span> —
+              providing interest-free loans (Qard Hasan) to help families build sustainable sources of
+              income. We built their website and management software, and we kept going.
             </p>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              We focus on developing practical solutions for everyday challenges faced by Muslims worldwide, 
-              from masjid management systems to educational tools and productivity applications.
+            <p className="text-ink-600 dark:text-ink-300 mb-6">
+              Today we&apos;re building tools for businesses, schools, and seekers of the Qur&apos;an —
+              each designed to be smooth, modern, and inspiring for the community it serves.
             </p>
-            <div className="bg-primary-50 border border-primary-200 rounded-lg p-6">
-              <p className="text-primary-800 font-arabic text-lg text-center">
-                "وَأَنْ لَيْسَ لِلْإِنْسَانِ إِلَّا مَا سَعَىٰ"
+            <div className="glass rounded-2xl p-6 border-primary-100 dark:border-ink-700">
+              <p className="text-primary-800 dark:text-primary-200 font-arabic text-xl text-center leading-relaxed">
+                وَأَن لَّيْسَ لِلْإِنسَانِ إِلَّا مَا سَعَىٰ
               </p>
-              <p className="text-primary-700 text-sm text-center mt-2 italic">
-                "And that there is nothing for man except what he strives for" - Quran 53:39
+              <p className="text-ink-500 dark:text-ink-400 text-sm text-center mt-2 italic">
+                &ldquo;And that there is nothing for man except what he strives for.&rdquo; — Qur&apos;an 53:39
               </p>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="relative">
-            <div className="accent-pattern rounded-2xl p-8 border border-primary-200 shadow-lg">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white rounded-lg p-4 shadow-sm">
-                  <div className="text-2xl font-bold text-primary-600">5+</div>
-                  <div className="text-sm text-gray-600">Active Projects</div>
-                </div>
-                <div className="bg-white rounded-lg p-4 shadow-sm">
-                  <div className="text-2xl font-bold text-primary-800">100%</div>
-                  <div className="text-sm text-gray-600">Faith Compliant</div>
-                </div>
-                <div className="bg-white rounded-lg p-4 shadow-sm">
-                  <div className="text-2xl font-bold text-primary-600">∞</div>
-                  <div className="text-sm text-gray-600">Community Impact</div>
-                </div>
-                <div className="bg-white rounded-lg p-4 shadow-sm">
-                  <div className="text-2xl font-bold text-primary-600">24/7</div>
-                  <div className="text-sm text-gray-600">Dedication</div>
+          <Reveal delay={120}>
+            <div className="relative">
+              <div className="aurora bg-primary-300 h-40 w-40 -top-6 -right-6 opacity-40" />
+              <div className="glass rounded-3xl p-8 shadow-soft">
+                <div className="grid grid-cols-2 gap-5">
+                  {[
+                    { v: '4+', l: 'Products in motion', c: 'text-primary-600 dark:text-primary-300' },
+                    { v: '100%', l: 'Faith-conscious', c: 'text-gradient-gold' },
+                    { v: '0%', l: 'Riba (interest)', c: 'text-primary-600 dark:text-primary-300' },
+                    { v: '24/7', l: 'Dedication', c: 'text-primary-600 dark:text-primary-300' },
+                  ].map((s) => (
+                    <div
+                      key={s.l}
+                      className="bg-white dark:bg-ink-800 rounded-2xl p-5 border border-ink-100 dark:border-ink-700"
+                    >
+                      <div className={`text-3xl font-display font-extrabold ${s.c}`}>{s.v}</div>
+                      <div className="text-sm text-ink-500 dark:text-ink-400 mt-1">{s.l}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((value, index) => (
-            <div key={index} className="card-elegant p-6">
-              <div className="bg-primary-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <value.icon className="h-6 w-6 text-primary-800" />
+            <Reveal key={value.title} delay={index * 80}>
+              <div className="card card-hover p-6 h-full">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 mb-4">
+                  <value.icon className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="font-display font-bold text-lg text-ink-900 dark:text-white mb-2">
+                  {value.title}
+                </h4>
+                <p className="text-sm text-ink-500 dark:text-ink-400">{value.description}</p>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">{value.title}</h4>
-              <p className="text-gray-600 dark:text-gray-300">{value.description}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

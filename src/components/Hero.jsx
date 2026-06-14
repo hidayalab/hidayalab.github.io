@@ -1,60 +1,97 @@
-import { ArrowRight, Star, Code, Users } from 'lucide-react'
+import { ArrowRight, Sparkles, HeartHandshake, ShieldCheck, Code2 } from 'lucide-react'
+import Reveal from './Reveal'
 
 export default function Hero() {
+  const stats = [
+    { value: '4+', label: 'Products for the Ummah' },
+    { value: '100%', label: 'Faith-conscious' },
+    { value: '∞', label: 'Sadaqah jariyah' },
+  ]
+
   return (
-    <section id="home" className="section-padding pt-24 geometric-pattern">
-      <div className="container-custom">
-        <div className="text-center">
-          <div className="mb-8">
-            <p className="text-sm font-medium text-primary-600 mb-4">
-              Assalamu Alaikum wa Rahmatullahi wa Barakatuh
+    <section
+      id="home"
+      className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28 hero-radial dot-grid"
+    >
+      {/* Aurora glows */}
+      <div className="aurora bg-primary-400 h-72 w-72 -top-10 left-1/4" />
+      <div className="aurora bg-gold-300 h-64 w-64 top-20 right-10" />
+
+      <div className="container-custom relative">
+        <div className="max-w-3xl mx-auto text-center">
+          <Reveal>
+            <p className="text-sm md:text-base font-arabic text-primary-700 dark:text-primary-300 mb-4">
+              ﷽
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Building Technology with
-              <span className="block text-gradient">Islamic Values</span>
+            <span className="eyebrow justify-center mb-6 glass px-4 py-1.5 rounded-full">
+              <Sparkles className="h-3.5 w-3.5" />
+              Digital solutions for the Ummah
+            </span>
+          </Reveal>
+
+          <Reveal delay={80}>
+            <h1 className="heading-xl text-4xl sm:text-5xl md:text-6xl leading-[1.08] mb-6">
+              Technology with
+              <span className="block shimmer-text">barakah &amp; purpose</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-              HidayaLab combines modern technology with timeless Islamic principles to create 
-              software products that serve and empower the Muslim community worldwide.
+          </Reveal>
+
+          <Reveal delay={160}>
+            <p className="text-lg md:text-xl text-ink-600 dark:text-ink-300 max-w-2xl mx-auto mb-9">
+              HidayaSoft builds modern, trustworthy software that empowers the Ummah — from
+              interest-free microfinance to school and business management, and tools that bring
+              hearts closer to the Qur&apos;an.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a
-              href="#projects"
-              className="btn-primary inline-flex items-center"
-            >
-              Explore Our Projects
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-            <a
-              href="#about"
-              className="btn-secondary"
-            >
-              Learn More
-            </a>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="card-elegant p-6">
-              <Code className="h-8 w-8 text-primary-600 mx-auto mb-3" />
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Modern Tech Stack</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">Built with cutting-edge technologies and best practices</p>
+          <Reveal delay={220}>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-14">
+              <a href="#products" className="btn-primary">
+                Explore our products
+                <ArrowRight className="h-5 w-5" />
+              </a>
+              <a href="#impact" className="btn-secondary">
+                <HeartHandshake className="h-5 w-5" />
+                Our charity commitment
+              </a>
             </div>
-            
-            <div className="card-elegant p-6">
-              <Star className="h-8 w-8 text-primary-500 mx-auto mb-3" />
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Islamic Values</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">Every product respects and upholds Islamic principles</p>
-            </div>
-            
-            <div className="card-elegant p-6">
-              <Users className="h-8 w-8 text-primary-700 mx-auto mb-3" />
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Community First</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">Designed to serve and strengthen Muslim communities</p>
-            </div>
-          </div>
+          </Reveal>
         </div>
+
+        {/* Feature pills */}
+        <Reveal delay={280}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {[
+              { icon: Code2, title: 'Modern & smooth', desc: 'Built with current tech and a polished, intuitive experience.' },
+              { icon: ShieldCheck, title: 'Trustworthy', desc: 'Privacy-first, ethical, and aligned with Islamic values.' },
+              { icon: HeartHandshake, title: 'Purpose-driven', desc: 'Part of our income flows to Amana Fund for charity.' },
+            ].map((f) => (
+              <div key={f.title} className="card card-hover p-5 text-left">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary-50 dark:bg-ink-700 mb-3">
+                  <f.icon className="h-5 w-5 text-primary-600 dark:text-primary-300" />
+                </div>
+                <h3 className="font-display font-bold text-ink-900 dark:text-white mb-1">{f.title}</h3>
+                <p className="text-sm text-ink-500 dark:text-ink-400">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        {/* Stats strip */}
+        <Reveal delay={340}>
+          <div className="mt-14 grid grid-cols-3 gap-4 max-w-2xl mx-auto">
+            {stats.map((s) => (
+              <div key={s.label} className="text-center">
+                <div className="text-3xl md:text-4xl font-display font-extrabold text-gradient">
+                  {s.value}
+                </div>
+                <div className="text-xs md:text-sm text-ink-500 dark:text-ink-400 mt-1">
+                  {s.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   )

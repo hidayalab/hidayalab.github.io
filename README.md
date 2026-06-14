@@ -1,40 +1,42 @@
-# HidayaLab Website
+# HidayaSoft Website
 
-> Building Technology with Islamic Values
+> Digital solutions for the Ummah
 
 ## Overview
 
-HidayaLab is a digital Islamic technology company dedicated to creating software solutions that serve the Muslim community while upholding the highest standards of faith and innovation. Our website showcases our ongoing projects and mission to combine modern technology with timeless Islamic principles.
+HidayaSoft is a faith-conscious software studio building modern, trustworthy digital solutions for the Ummah. From interest-free microfinance to business and school management and tools for memorising the Qur'an, our products combine modern technology with timeless Islamic values. Part of our income is devoted to charity through Amana Fund.
 
 ## 🌐 Live Website
 
-Visit us at: **[hidayalab.github.io](https://hidayalab.github.io)**
+Visit us at: **[hidayasoft.com](https://hidayasoft.com)**
 
-## 🚀 Our Projects
+## 🚀 Our Products
 
-### Active Projects
-- **[HidayaDesk](https://hidayalab.github.io/hidayadesk/)** - Productivity suite with Islamic bookmarks, prayer reminders, and Quran widgets *(Live)*
-- **[Amana Fund](https://www.amanafund.org/)** - Islamic organization providing Qard Hasan (interest-free loans) to community members *(Live)*
-- **Masjid Management System** - Comprehensive digital solution for mosque administration *(Pending)*
-- **Quran Memorization App** - Interactive app to help Muslims memorize the Holy Quran *(Pending)*
+- **[Amana Fund](https://www.amanafund.org/)** — Interest-free microfinance (Qard Hasan) helping families build sustainable income. We built their website and management software *(Live)*
+- **HidayaERP** — Finance & operations: inventory, customers & suppliers, purchase & sales records, payments, and customised dashboards *(In Development)*
+- **School Management** — Tracks teachers, students, staff, and investors with attendance, expense management, and salary & tuition handling *(In Development)*
+- **Hifzul Qalb** — A companion app for memorising and revising the Qur'an, with gentle reminders for the verses you tend to forget *(In Progress)*
+
+## 🤲 Charitable Commitment
+
+Part of HidayaSoft's income flows to **Amana Fund**, providing interest-free loans that help families build sustainable sources of income — making every product a form of sadaqah jariyah, in shaa Allah.
 
 ## 🛠️ Technology Stack
 
-- **Frontend**: React 18 + Vite
-- **Styling**: Tailwind CSS v4
+- **Frontend**: React 19 + Vite
+- **Styling**: Tailwind CSS v3
 - **Icons**: Lucide React
 - **Deployment**: GitHub Pages
 - **Build Tool**: Vite
 
 ## 🎨 Design Philosophy
 
-Our website reflects our Islamic values through:
-- Clean, minimal design with geometric patterns
-- Elegant black and white color palette with sophisticated gradients
-- Light and dark theme support with smooth transitions
-- Arabic typography using Amiri font
-- Respectful integration of Quranic verses and Islamic phrases
-- Adaptive logo that works in both light and dark themes
+Our website reflects our values through:
+- A calm, modern emerald palette with warm gold accents (hidaya = guidance)
+- Smooth scroll-reveal animations and an inspiring, faith-conscious tone
+- Light and dark themes with seamless transitions
+- An Islamic geometric star brand mark and Arabic typography (Amiri)
+- Respectful integration of Qur'anic verses and Islamic phrases
 
 ## 🏗️ Local Development
 
@@ -62,19 +64,22 @@ npm run preview
 
 ```
 ├── public/                 # Static assets
-│   ├── logo.png           # HidayaLab logo
-│   └── favicon files
 ├── src/
 │   ├── components/        # React components
+│   │   ├── BrandMark.jsx   # HidayaSoft logo mark (SVG)
 │   │   ├── Header.jsx
 │   │   ├── Hero.jsx
 │   │   ├── About.jsx
-│   │   ├── Projects.jsx
+│   │   ├── Products.jsx
+│   │   ├── Impact.jsx      # Charity / Amana Fund commitment
 │   │   ├── Contact.jsx
-│   │   └── Footer.jsx
-│   ├── index.css         # Tailwind CSS + custom styles
-│   ├── App.jsx           # Main app component
-│   └── main.jsx          # Entry point
+│   │   ├── Footer.jsx
+│   │   ├── Reveal.jsx      # Scroll-reveal animation helper
+│   │   └── ThemeToggle.jsx
+│   ├── contexts/          # Theme context
+│   ├── index.css          # Tailwind CSS + design system
+│   ├── App.jsx            # Main app component
+│   └── main.jsx           # Entry point
 ├── index.html            # HTML template with meta tags
 ├── tailwind.config.js    # Tailwind configuration
 └── vite.config.js        # Vite configuration
@@ -92,17 +97,17 @@ We welcome contributions from developers, designers, and community members who s
 
 ## 📧 Contact
 
-- **GitHub**: [@hidayalab](https://github.com/hidayalab)
-- **Website**: [hidayalab.github.io](https://hidayalab.github.io)
+- **Email**: [assalamu@hidayasoft.com](mailto:assalamu@hidayasoft.com)
+- **Website**: [hidayasoft.com](https://hidayasoft.com)
 
 ## 📜 Values & Mission
 
-**Mission**: To bridge the gap between modern digital solutions and Islamic values, creating tools that empower individuals and strengthen communities.
+**Mission**: To build digital solutions for the Ummah that are modern, trustworthy, and purpose-driven — empowering individuals, businesses, schools, and charities.
 
 **Values**:
 - Faith-first development guided by Islamic principles
-- Trust & privacy with highest ethical standards
-- Innovation & excellence in all our work
+- Trust & privacy with the highest ethical standards
+- Excellence (ihsan) in craft, and giving back to the community
 
 ---
 
