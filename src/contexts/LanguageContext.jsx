@@ -12,6 +12,11 @@ export const useLanguage = () => {
 
 export const translations = {
   en: {
+    seo: {
+      title: 'HidayaSoft — Digital Solutions for the Ummah',
+      description: 'HidayaSoft builds modern, faith-conscious digital solutions for the Ummah — from Qard Hasan microfinance to school and business management tools.',
+      keywords: 'HidayaSoft, Islamic software, Ummah technology, Amana Fund, Qard Hasan, microfinance, HidayaERP, school management system, Hifzul Qalb, Quran memorization app, halal software',
+    },
     nav: {
       home: 'Home',
       about: 'About',
@@ -113,6 +118,11 @@ export const translations = {
     },
   },
   bn: {
+    seo: {
+      title: 'হিদায়াসফট — উম্মাহর জন্য আধুনিক ডিজিটাল সমাধান',
+      description: 'হিদায়াসফট উম্মাহর জন্য আধুনিক ও ঈমান-সচেতন ডিজিটাল সমাধান তৈরি করছে—সুদমুক্ত ঋণ (করজে হাসানা) থেকে শুরু করে স্কুল ও ব্যবসা ব্যবস্থাপনা টুলস পর্যন্ত।',
+      keywords: 'হিদায়াসফট, ইসলামিক সফটওয়্যার, আমানাহ ফান্ড, সুদমুক্ত ঋণ, করজে হাসানা, মাইক্রোফাইন্যান্স, হিফজুল কলব, কুরআন মুখস্থ করার অ্যাপ, হালাল সফটওয়্যার, HidayaSoft',
+    },
     nav: {
       home: 'হোম',
       about: 'আমাদের কথা',
@@ -217,7 +227,20 @@ export const translations = {
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
-    return localStorage.getItem('hidayasoft-lang') || 'en'
+    // 1. Check URL parameters first (good for SEO crawling)
+    const params = new URLSearchParams(window.location.search)
+    const langParam = params.get('lang')
+    if (langParam === 'bn' || langParam === 'en') return langParam
+
+    // 2. Check local storage
+    const saved = localStorage.getItem('hidayasoft-lang')
+    if (saved === 'bn' || saved === 'en') return saved
+
+    // 3. Check browser language
+    const browserLang = navigator.language || navigator.userLanguage
+    if (browserLang.startsWith('bn')) return 'bn'
+
+    return 'en'
   })
 
   useEffect(() => {
@@ -225,6 +248,9 @@ export const LanguageProvider = ({ children }) => {
     const root = document.documentElement
     root.setAttribute('lang', language)
     root.classList.toggle('lang-bn', language === 'bn')
+
+    // Update URL if needed for consistent crawling, or just leave it
+    // We don't want to force ?lang=en on everyone, but ?lang=bn is useful
   }, [language])
 
   const toggleLanguage = () => {
