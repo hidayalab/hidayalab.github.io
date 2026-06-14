@@ -1,11 +1,13 @@
 import BrandMark from './BrandMark'
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const { t } = useLanguage()
 
   const columns = [
     {
-      title: 'Products',
+      title: t.footer.productsTitle,
       items: [
         { name: 'Amana Fund', href: 'https://www.amanafund.org/' },
         { name: 'HidayaERP', href: '#products' },
@@ -14,7 +16,7 @@ export default function Footer() {
       ],
     },
     {
-      title: 'Connect',
+      title: t.footer.connectTitle,
       items: [
         { name: 'assalamu@hidayasoft.com', href: 'mailto:assalamu@hidayasoft.com' },
         { name: 'About', href: '#about' },
@@ -35,10 +37,8 @@ export default function Footer() {
                 HidayaSoft
               </span>
             </a>
-            <p className="text-ink-200 text-lg mb-4">Digital solutions for the ummah.</p>
-            <p className="text-ink-400 leading-relaxed">
-              A part of our income supports Amana Fund — interest-free loans for those in need.
-            </p>
+            <p className="text-ink-200 text-lg mb-4">{t.footer.tagline}</p>
+            <p className="text-ink-400 leading-relaxed">{t.footer.note}</p>
           </div>
 
           {columns.map((section) => (
@@ -55,7 +55,7 @@ export default function Footer() {
                       rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                       className="text-ink-200 hover:text-primary-300 transition-colors duration-200"
                     >
-                      {item.name}
+                      {t.footer.items[item.name] || item.name}
                     </a>
                   </li>
                 ))}
@@ -67,7 +67,7 @@ export default function Footer() {
         <div className="border-t border-ink-800 pt-7 mt-14">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
             <p className="text-ink-400 text-sm">
-              © {currentYear} HidayaSoft. Built with intention.
+              © {currentYear} {t.footer.copyright}
             </p>
             <a
               href="https://hidayasoft.com"

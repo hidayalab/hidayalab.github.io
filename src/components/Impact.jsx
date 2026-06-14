@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import Reveal from './Reveal'
+import { useLanguage } from '../contexts/LanguageContext'
 
 /* Antique-gold crescent moon with a four-point star. */
 function CrescentStar({ className = '' }) {
@@ -39,6 +40,7 @@ function CirclePattern({ className = '' }) {
 }
 
 export default function Impact() {
+  const { t } = useLanguage()
   return (
     <section id="impact" className="section-padding">
       <div className="container-custom">
@@ -51,16 +53,14 @@ export default function Impact() {
             <div className="relative grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
               <div>
                 <span className="block text-xs font-semibold uppercase tracking-[0.22em] text-[#d8b974] mb-5">
-                  Sadaqah Jariyah
+                  {t.impact.eyebrow}
                 </span>
                 <h2 className="font-serif text-4xl md:text-5xl leading-[1.12] text-white mb-6">
-                  A part of everything we build funds{' '}
-                  <span className="text-[#d8b974]">Amana Fund.</span>
+                  {t.impact.titlePre}
+                  <span className="text-[#d8b974]">{t.impact.titleHighlight}</span>
                 </h2>
                 <p className="text-base md:text-lg text-white/70 max-w-xl mb-9 leading-relaxed">
-                  Amana Fund gives interest-free loans (Qard Hasan) to families in need — turning a
-                  moment of hardship into a lasting source of income. When you work with HidayaSoft,
-                  you help fund that work.
+                  {t.impact.body}
                 </p>
                 <a
                   href="https://www.amanafund.org/"
@@ -68,7 +68,7 @@ export default function Impact() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#f3efe6] hover:bg-white text-[#17294c] font-semibold py-3 px-7 transition-colors duration-300 group"
                 >
-                  About Amana Fund
+                  {t.impact.cta}
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </div>

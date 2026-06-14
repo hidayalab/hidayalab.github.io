@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Playfair+Display:wght@500;600;700&family=Amiri:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Playfair+Display:wght@500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,7 +17,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: #faf7f1;
   color: #0e1117;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -29,6 +29,19 @@ body {
 
 ::selection {
   background: rgba(16, 185, 129, 0.25);
+}
+
+/* Bangla typography: swap Latin display/serif fonts for a Bangla face */
+.font-bangla {
+  font-family: 'Hind Siliguri', 'Inter', sans-serif;
+}
+.lang-bn,
+.lang-bn .font-display,
+.lang-bn .font-serif {
+  font-family: 'Hind Siliguri', 'Inter', system-ui, sans-serif;
+}
+.lang-bn .shimmer-text {
+  line-height: 1.35;
 }
 
 ::-webkit-scrollbar {
@@ -55,7 +68,7 @@ body {
   }
 
   .section-alt {
-    @apply bg-primary-50/40 dark:bg-ink-900/60;
+    @apply bg-[#f2ece0] dark:bg-ink-900/60;
   }
 
   .btn-primary {
@@ -75,7 +88,7 @@ body {
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-primary-600 via-primary-500 to-emerald-400 dark:from-primary-300 dark:via-primary-400 dark:to-emerald-300 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-800 via-primary-700 to-primary-600 dark:from-primary-200 dark:via-primary-300 dark:to-emerald-200 bg-clip-text text-transparent;
   }
 
   .text-gradient-gold {
@@ -95,7 +108,7 @@ body {
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary-600 dark:text-primary-300;
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold-600 dark:text-gold-400;
   }
 
   .chip {
@@ -154,18 +167,18 @@ body {
 
 .hero-radial {
   background:
-    radial-gradient(1200px 600px at 50% -10%, rgba(16, 185, 129, 0.18), transparent 60%),
-    radial-gradient(900px 500px at 85% 10%, rgba(245, 158, 11, 0.12), transparent 55%);
+    radial-gradient(1100px 560px at 50% -12%, rgba(20, 83, 45, 0.10), transparent 60%),
+    radial-gradient(820px 460px at 82% 8%, rgba(200, 160, 70, 0.12), transparent 55%);
 }
 .dark .hero-radial {
   background:
-    radial-gradient(1200px 600px at 50% -10%, rgba(16, 185, 129, 0.18), transparent 60%),
-    radial-gradient(900px 500px at 85% 10%, rgba(245, 158, 11, 0.10), transparent 55%);
+    radial-gradient(1100px 560px at 50% -12%, rgba(16, 185, 129, 0.16), transparent 60%),
+    radial-gradient(820px 460px at 82% 8%, rgba(245, 158, 11, 0.10), transparent 55%);
 }
 
 /* Animated gradient text shimmer */
 .shimmer-text {
-  background: linear-gradient(90deg, #047857, #10b981, #fbbf24, #10b981, #047857);
+  background: linear-gradient(90deg, #0f5132, #157f4e, #c9a24a, #157f4e, #0f5132);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;

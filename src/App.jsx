@@ -1,4 +1,5 @@
 import { ThemeProvider } from './contexts/ThemeContext'
+import { LanguageProvider } from './contexts/LanguageContext'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -10,17 +11,19 @@ import Footer from './components/Footer'
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-ink-950 text-ink-900 dark:text-ink-100 transition-colors duration-300">
-        <Header />
-        <main>
-          <Hero />
-          <About />
-          <Products />
-          <Impact />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
+      <LanguageProvider>
+        <div className="min-h-screen bg-white dark:bg-ink-950 text-ink-900 dark:text-ink-100 transition-colors duration-300">
+          <Header />
+          <main>
+            <Hero />
+            <About />
+            <Products />
+            <Impact />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </LanguageProvider>
     </ThemeProvider>
   )
 }

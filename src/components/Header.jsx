@@ -1,18 +1,21 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
+import LanguageToggle from './LanguageToggle'
 import BrandMark from './BrandMark'
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { t } = useLanguage()
 
   const navigation = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Products', href: '#products' },
-    { name: 'Impact', href: '#impact' },
-    { name: 'Contact', href: '#contact' },
+    { name: t.nav.home, href: '#home' },
+    { name: t.nav.about, href: '#about' },
+    { name: t.nav.products, href: '#products' },
+    { name: t.nav.impact, href: '#impact' },
+    { name: t.nav.contact, href: '#contact' },
   ]
 
   useEffect(() => {
@@ -48,13 +51,15 @@ export default function Header() {
               </a>
             ))}
             <div className="mx-2 h-6 w-px bg-ink-100 dark:bg-ink-700" />
+            <LanguageToggle />
             <ThemeToggle />
             <a href="#contact" className="btn-primary ml-2 !py-2 !px-5 text-sm">
-              Get in touch
+              {t.nav.getInTouch}
             </a>
           </div>
 
           <div className="md:hidden flex items-center gap-2">
+            <LanguageToggle />
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -84,7 +89,7 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
                 className="btn-primary w-full mt-2"
               >
-                Get in touch
+                {t.nav.getInTouch}
               </a>
             </div>
           </div>
