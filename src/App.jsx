@@ -1,6 +1,7 @@
 import { ThemeProvider } from './contexts/ThemeContext'
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext'
 import { Helmet } from 'react-helmet-async'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -8,6 +9,7 @@ import Products from './components/Products'
 import Impact from './components/Impact'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import HifzQalbPage from './pages/HifzQalb'
 
 function AppContent() {
   const { language, t } = useLanguage()
@@ -31,11 +33,18 @@ function AppContent() {
       </Helmet>
       <Header />
       <main>
-        <Hero />
-        <About />
-        <Products />
-        <Impact />
-        <Contact />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <About />
+              <Products />
+              <Impact />
+              <Contact />
+            </>
+          } />
+          <Route path="/hifzqalb" element={<HifzQalbPage />} />
+        </Routes>
       </main>
       <Footer />
     </div>
@@ -46,7 +55,9 @@ function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <AppContent />
+        <Router>
+          <AppContent />
+        </Router>
       </LanguageProvider>
     </ThemeProvider>
   )

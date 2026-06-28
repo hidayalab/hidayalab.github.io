@@ -18,7 +18,7 @@ const META = [
   { status: 'Live', preview: AmanaPreview, href: 'https://www.amanafund.org/', external: true },
   { status: 'Building', preview: ErpPreview },
   { status: 'Building', preview: SchoolPreview },
-  { status: 'In progress', preview: HifzPreview },
+  { status: 'In progress', preview: HifzPreview, slug: 'hifzqalb' },
 ]
 
 export default function Products() {
@@ -61,7 +61,7 @@ export default function Products() {
                     {product.description}
                   </p>
                   <a
-                    href={product.href || '#contact'}
+                    href={product.slug ? `/${product.slug}` : (product.href || '#contact')}
                     {...(product.external
                       ? { target: '_blank', rel: 'noopener noreferrer' }
                       : {})}
