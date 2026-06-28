@@ -53,43 +53,76 @@ export default function HifzQalbPage() {
 
           {/* Hero phone : HOME */}
           <div className="flex justify-center order-first lg:order-last">
-            <div className="hq-float w-[260px] h-[540px] sm:w-[308px] sm:h-[646px] bg-[#FAF6F1] rounded-[36px] sm:rounded-[42px] border-[7px] sm:border-[9px] border-[#102E2E] relative overflow-hidden shadow-[0_30px_70px_rgba(14,58,58,0.2)] sm:shadow-[0_44px_96px_rgba(14,58,58,0.26)] flex flex-col flex-[0_0_auto] dark:bg-ink-900 dark:border-primary-700">
-              <div className="h-[26px] sm:h-[30px] flex-[0_0_26px] sm:flex-[0_0_30px] flex items-end justify-between px-5 sm:px-6 pb-[4px] sm:pb-[5px]">
+            <div className="hq-float w-[260px] sm:w-[308px] bg-[#FAF6F1] rounded-[36px] sm:rounded-[42px] border-[7px] sm:border-[9px] border-[#102E2E] overflow-hidden shadow-[0_30px_70px_rgba(14,58,58,0.2)] sm:shadow-[0_44px_96px_rgba(14,58,58,0.26)] dark:bg-ink-900 dark:border-primary-700">
+              {/* Status bar */}
+              <div className="flex items-end justify-between px-5 sm:px-6 pt-3 sm:pt-3.5 pb-1">
                 <span className="text-[10px] sm:text-[11px] font-medium text-[#0E3A3A] dark:text-white">9:41</span>
-                <span className="flex gap-[4px] sm:gap-[5px] items-center text-[#0E3A3A] dark:text-white"><svg width="12" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" className="sm:w-[14px] sm:h-[10px]"><line x1="4" y1="20" x2="4" y2="15"/><line x1="10" y1="20" x2="10" y2="11"/><line x1="16" y1="20" x2="16" y2="7"/><line x1="22" y1="20" x2="22" y2="4"/></svg><svg width="16" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="sm:w-[19px] sm:h-[10px]"><rect x="1" y="7" width="18" height="10" rx="2.5"/><rect x="3.5" y="9.5" width="11" height="5" rx="1" fill="currentColor" stroke="none"/></svg></span>
+                <span className="flex gap-[4px] sm:gap-[5px] items-center text-[#0E3A3A] dark:text-white">
+                  <svg width="12" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" className="sm:w-[14px] sm:h-[10px]"><line x1="4" y1="20" x2="4" y2="15"/><line x1="10" y1="20" x2="10" y2="11"/><line x1="16" y1="20" x2="16" y2="7"/><line x1="22" y1="20" x2="22" y2="4"/></svg>
+                  <svg width="16" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="sm:w-[19px] sm:h-[10px]"><rect x="1" y="7" width="18" height="10" rx="2.5"/><rect x="3.5" y="9.5" width="11" height="5" rx="1" fill="currentColor" stroke="none"/></svg>
+                </span>
               </div>
-              <div className="flex-1 min-h-0 overflow-hidden px-4 sm:px-[18px] pt-1">
-                <div className="flex justify-between items-start mb-[14px] sm:mb-[17px]">
+
+              {/* Content */}
+              <div className="px-4 sm:px-[18px] pt-2 pb-5 sm:pb-6">
+                {/* Greeting */}
+                <div className="flex justify-between items-start mb-3 sm:mb-[17px]">
                   <div>
-                    <div className="text-[8px] sm:text-[9px] tracking-[0.22em] uppercase text-[#5A6464] mb-[6px] sm:mb-[7px] dark:text-ink-400">Thursday · 18 Jumādā II</div>
-                    <div className="font-display text-[19px] sm:text-[23px] leading-[1.05] text-[#0E3A3A] dark:text-white">Assalamu alaikum,<br/>Yusuf</div>
+                    <div className="text-[8px] sm:text-[9px] tracking-[0.22em] uppercase text-[#5A6464] mb-1.5 sm:mb-[7px] dark:text-ink-400">Thursday · 18 Jumādā II</div>
+                    <div className="font-display text-[18px] sm:text-[23px] leading-[1.05] text-[#0E3A3A] dark:text-white">Assalamu alaikum,<br/>Yusuf</div>
                   </div>
-                  <div className="w-[32px] h-[32px] sm:w-[36px] sm:h-[36px] rounded-[999px] bg-[#0E3A3A] text-[#FAF6F1] flex items-center justify-center font-display text-[13px] sm:text-[15px] flex-[0_0_32px] sm:flex-[0_0_36px] dark:bg-primary-700">Y</div>
+                  <div className="w-[32px] h-[32px] sm:w-[36px] sm:h-[36px] rounded-full bg-[#0E3A3A] text-[#FAF6F1] flex items-center justify-center font-display text-[13px] sm:text-[15px] shrink-0 dark:bg-primary-700">Y</div>
                 </div>
-                
+
                 {/* Path card */}
-                <div className="bg-[#0E3A3A] rounded-[18px] sm:rounded-[20px] px-4 sm:px-[17px] py-[14px_16px_14px] sm:py-[16px_17px_17px] text-[#FAF6F1] mb-[10px] sm:mb-[12px] dark:bg-primary-700">
-                  <div className="flex justify-between items-center mb-[11px] sm:mb-[13px]">
+                <div className="bg-[#0E3A3A] rounded-[18px] sm:rounded-[20px] px-4 sm:px-[17px] pt-3 pb-3 sm:pt-[16px] sm:pb-[17px] text-[#FAF6F1] mb-3 sm:mb-[12px] dark:bg-primary-700">
+                  <div className="flex justify-between items-center mb-2.5 sm:mb-[13px]">
                     <span className="text-[8px] sm:text-[8.5px] tracking-[0.22em] uppercase text-[#F3DED5] dark:text-gold-200">Your path</span>
-                    <span className="inline-flex items-center gap-[4px] sm:gap-[5px] bg-[rgba(201,163,106,0.18)] rounded-[999px] px-[7px_3px_7px_3px] sm:px-[9px_4px_9px_4px] text-[#C9A36A]"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" className="sm:w-[11px] sm:h-[11px]"><path d="M12 2c.5 3-1.8 4.2-1.8 6.5 0 1.2.8 2 1.8 2s1.6-.7 1.7-1.8c1.2 1 2.1 2.8 2.1 4.6a5.8 5.8 0 1 1-11.6 0c0-2.4 1.4-4.1 2.6-5.6C8.3 9 9.6 6.5 12 2Z"/></svg><span className="text-[10px] sm:text-[11px] font-display text-[#FFFDF9] dark:text-white">23</span></span>
+                    <span className="inline-flex items-center gap-[5px] bg-[rgba(201,163,106,0.18)] rounded-full px-2 py-1 text-[#C9A36A]">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" className="sm:w-[11px] sm:h-[11px]"><path d="M12 2c.5 3-1.8 4.2-1.8 6.5 0 1.2.8 2 1.8 2s1.6-.7 1.7-1.8c1.2 1 2.1 2.8 2.1 4.6a5.8 5.8 0 1 1-11.6 0c0-2.4 1.4-4.1 2.6-5.6C8.3 9 9.6 6.5 12 2Z"/></svg>
+                      <span className="text-[10px] sm:text-[11px] font-display text-[#FFFDF9] dark:text-white">23</span>
+                    </span>
                   </div>
-                  <div className="flex items-end justify-between gap-[8px] sm:gap-[10px] mb-[12px] sm:mb-[15px]">
-                    <span className="font-display text-[17px] sm:text-[21px] leading-[1.02] text-[#FFFDF9] dark:text-white">Juz ʿAmma Mastery</span>
-                    <span dir="rtl" className="font-['Amiri'] text-[15px] sm:text-[18px] text-[#F3DED5] whitespace-nowrap dark:text-gold-200">جُزء عَمَّ</span>
+                  <div className="flex items-end justify-between gap-[8px] sm:gap-[10px] mb-2.5 sm:mb-[15px]">
+                    <span className="font-display text-[16px] sm:text-[21px] leading-[1.02] text-[#FFFDF9] dark:text-white">Juz ʿAmma Mastery</span>
+                    <span dir="rtl" className="font-['Amiri'] text-[14px] sm:text-[18px] text-[#F3DED5] whitespace-nowrap dark:text-gold-200">جُزء عَمَّ</span>
                   </div>
-                  <div className="flex items-baseline justify-between mb-[6px] sm:mb-[7px]"><span className="text-[10px] sm:text-[11px] text-[#F3DED5] dark:text-gold-200">231 of 564 verses</span><span className="font-display text-[12px] sm:text-[14px] text-[#FFFDF9] dark:text-white">41%</span></div>
-                  <span className="block h-[5px] sm:h-[6px] rounded-[999px] bg-[rgba(243,222,213,0.16)] relative overflow-hidden"><span className="absolute inset-0 auto-0-0 w-[41%] bg-[#C9A36A] rounded-[999px]"></span></span>
+                  <div className="flex items-baseline justify-between mb-[6px] sm:mb-[7px]">
+                    <span className="text-[10px] sm:text-[11px] text-[#F3DED5] dark:text-gold-200">231 of 564 verses</span>
+                    <span className="font-display text-[12px] sm:text-[14px] text-[#FFFDF9] dark:text-white">41%</span>
+                  </div>
+                  <span className="block h-[5px] sm:h-[6px] rounded-full bg-[rgba(243,222,213,0.16)] relative overflow-hidden">
+                    <span className="absolute inset-y-0 left-0 w-[41%] bg-[#C9A36A] rounded-full"></span>
+                  </span>
                 </div>
-                
+
                 {/* Today's training */}
-                <div className="text-[8px] sm:text-[9px] tracking-[0.22em] uppercase text-[#5A6464] my-[14px_2px_7px] sm:my-[16px_2px_9px] dark:text-ink-400">Today's training</div>
-                <div className="bg-[#F4ECE3] rounded-[16px] sm:rounded-[18px] px-4 sm:px-[15px_15px_12px_15px] py-[12px_12px_12px_12px] sm:py-[15px_15px_14px_15px] border border-[#D9D3CB] dark:bg-ink-800 dark:border-primary-500/20">
-                  <div className="flex items-baseline justify-between gap-[6px] sm:gap-[8px] mb-[10px] sm:mb-[12px]"><span className="font-display text-[14px] sm:text-[17px] text-[#0E3A3A] dark:text-white">A short, guided set</span><span className="text-[9px] sm:text-[10px] text-[#5A6464] dark:text-ink-400">~9 min</span></div>
-                  <div className="flex gap-[6px] sm:gap-[8px] mb-[12px] sm:mb-[14px]">
-                    <div className="flex-1 bg-[#FAF6F1] border border-[#D9D3CB] rounded-[10px] sm:rounded-[12px] px-3 sm:px-[11px_10px_11px_10px] py-2 sm:py-[10px_11px_10px_11px] dark:bg-ink-700 dark:border-primary-500/20"><div className="flex items-baseline gap-[4px] sm:gap-[5px]"><span className="font-display text-[17px] sm:text-[21px] leading-1 text-[#0E3A3A] dark:text-white">1</span><span className="text-[9px] sm:text-[10px] text-[#5A6464] dark:text-ink-400">new</span></div><div className="text-[8px] sm:text-[8.5px] tracking-[0.1em] uppercase text-[#5A6464] mt-[4px] sm:mt-[5px] dark:text-ink-400">To memorize</div></div>
-                    <div className="flex-1 bg-[#FAF6F1] border border-[#D9D3CB] rounded-[10px] sm:rounded-[12px] px-3 sm:px-[11px_10px_11px_10px] py-2 sm:py-[10px_11px_10px_11px] dark:bg-ink-700 dark:border-primary-500/20"><div className="flex items-baseline gap-[4px] sm:gap-[5px]"><span className="font-display text-[17px] sm:text-[21px] leading-1 text-[#0E3A3A] dark:text-white">3</span><span className="text-[9px] sm:text-[10px] text-[#5A6464] dark:text-ink-400">review</span></div><div className="text-[8px] sm:text-[8.5px] tracking-[0.1em] uppercase text-[#5A6464] mt-[4px] sm:mt-[5px] dark:text-ink-400">Due now</div></div>
+                <div className="text-[8px] sm:text-[9px] tracking-[0.22em] uppercase text-[#5A6464] mt-3 mb-2 sm:mt-[16px] sm:mb-[9px] dark:text-ink-400">Today's training</div>
+                <div className="bg-[#F4ECE3] rounded-[16px] sm:rounded-[18px] px-3.5 sm:px-[15px] py-3 sm:py-[15px] border border-[#D9D3CB] dark:bg-ink-800 dark:border-primary-500/20">
+                  <div className="flex items-baseline justify-between gap-2 mb-2.5 sm:mb-[12px]">
+                    <span className="font-display text-[13px] sm:text-[17px] text-[#0E3A3A] dark:text-white">A short, guided set</span>
+                    <span className="text-[9px] sm:text-[10px] text-[#5A6464] shrink-0 dark:text-ink-400">~9 min</span>
                   </div>
-                  <div className="w-full bg-[#0E3A3A] text-[#FAF6F1] rounded-[999px] px-3 sm:px-4 py-3 sm:py-3.5 text-[11px] sm:text-[13px] tracking-[0.03em] flex items-center justify-center gap-[6px] sm:gap-[8px] dark:bg-primary-700 dark:text-white">Begin today's session<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="sm:w-[14px] sm:h-[14px]"><path d="M8 5v14l11-7z"/></svg></div>
+                  <div className="flex gap-[6px] sm:gap-[8px] mb-2.5 sm:mb-[14px]">
+                    <div className="flex-1 bg-[#FAF6F1] border border-[#D9D3CB] rounded-[10px] sm:rounded-[12px] px-2.5 sm:px-[11px] py-2 sm:py-[10px] dark:bg-ink-700 dark:border-primary-500/20">
+                      <div className="flex items-baseline gap-1">
+                        <span className="font-display text-[16px] sm:text-[21px] leading-none text-[#0E3A3A] dark:text-white">1</span>
+                        <span className="text-[9px] sm:text-[10px] text-[#5A6464] dark:text-ink-400">new</span>
+                      </div>
+                      <div className="text-[7px] sm:text-[8.5px] tracking-[0.1em] uppercase text-[#5A6464] mt-1 dark:text-ink-400">To memorize</div>
+                    </div>
+                    <div className="flex-1 bg-[#FAF6F1] border border-[#D9D3CB] rounded-[10px] sm:rounded-[12px] px-2.5 sm:px-[11px] py-2 sm:py-[10px] dark:bg-ink-700 dark:border-primary-500/20">
+                      <div className="flex items-baseline gap-1">
+                        <span className="font-display text-[16px] sm:text-[21px] leading-none text-[#0E3A3A] dark:text-white">3</span>
+                        <span className="text-[9px] sm:text-[10px] text-[#5A6464] dark:text-ink-400">review</span>
+                      </div>
+                      <div className="text-[7px] sm:text-[8.5px] tracking-[0.1em] uppercase text-[#5A6464] mt-1 dark:text-ink-400">Due now</div>
+                    </div>
+                  </div>
+                  <div className="w-full bg-[#0E3A3A] text-[#FAF6F1] rounded-full px-3 py-2.5 sm:py-3 text-[11px] sm:text-[13px] tracking-[0.03em] flex items-center justify-center gap-2 dark:bg-primary-700 dark:text-white">
+                    Begin today's session
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="sm:w-[14px] sm:h-[14px]"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
                 </div>
               </div>
             </div>
