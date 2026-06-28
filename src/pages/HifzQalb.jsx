@@ -14,24 +14,6 @@ export default function HifzQalbPage() {
         .hq-pulse { animation: wpulse 2.4s ease-in-out infinite; }
       `}</style>
 
-      {/* ── Floating app CTA pill (always visible while scrolling) ── */}
-      <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 flex items-center gap-2 bg-[#0E3A3A] text-[#FAF6F1] rounded-full shadow-[0_8px_32px_rgba(14,58,58,0.35)] px-2 py-2 dark:bg-primary-800" style={{ backdropFilter: 'blur(8px)' }}>
-        <a
-          href="#"
-          className="inline-flex items-center gap-2 bg-[#FAF6F1] text-[#0E3A3A] rounded-full px-4 py-2 text-[13px] font-medium hover:bg-[#F4ECE3] transition-colors dark:bg-ink-100 dark:text-primary-900"
-        >
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 1.8 13 11.2 3.6 20.6c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm10.9 10.9 2.6 2.6-9.3 5.3 6.7-7.9Zm3.9-3.9 2.8 1.6c.7.4.7 1.4 0 1.8l-2.8 1.6-2.9-2.5 2.9-2.5ZM5.2 1.4l9.3 5.3-2.6 2.6-6.7-7.9Z"/></svg>
-          {tq.hero.android}
-        </a>
-        <a
-          href="#"
-          className="inline-flex items-center gap-2 text-[#FAF6F1] rounded-full px-4 py-2 text-[13px] font-medium opacity-90 hover:opacity-100 transition-opacity"
-        >
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          {tq.hero.openWebApp}
-        </a>
-      </div>
-
       {/* ============ HERO ============ */}
       <header id="home" className="relative bg-[radial-gradient(1100px_560px_at_18%_-8%,#F4ECE3_0%,transparent_60%),radial-gradient(820px_520px_at_92%_0%,#F0E7DA_0%,transparent_55%),#FAF6F1] dark:bg-gradient-to-b dark:from-ink-900 dark:to-ink-950">
         <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" className="absolute top-[-40px] right-[-60px] w-[320px] h-[320px] sm:w-[520px] sm:h-[520px] opacity-[0.05] pointer-events-none dark:stroke-white" fill="none" stroke="#0E3A3A" strokeWidth="0.5"><rect x="22" y="22" width="56" height="56"/><rect x="22" y="22" width="56" height="56" transform="rotate(45 50 50)"/><circle cx="50" cy="50" r="34"/><circle cx="50" cy="50" r="20"/></svg>
