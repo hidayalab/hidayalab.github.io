@@ -1,0 +1,29 @@
+# HidayaSoft
+
+> HidayaSoft is a faith-conscious software studio building modern digital solutions for the Muslim Ummah. A portion of all revenue supports Amana Fund — providing interest-free loans (Qard Hasan) to families in need.
+
+## Products
+
+- [HifzQalb](https://hidayasoft.com/hifzqalb): Free Quran memorization app for Android and web. Uses spaced repetition and active recall. Guided paths from daily prayer surahs to full hifz. No account needed, works offline, no ads — forever free.
+- [Amana Fund](https://www.amanafund.org/): Interest-free microfinance (Qard Hasan) for families in need. HidayaSoft built and maintains their website and management software.
+- HidayaERP: Business ERP — inventory, customers, suppliers, purchases, sales and payments with a customized analytics dashboard.
+- School Management System: Digital administration for schools — student and teacher records, attendance, expenses, salary and tuition management.
+
+## Mission
+
+HidayaSoft was founded on the belief that technology should serve humanity while honouring divine guidance. Every product is built to be halal, trustworthy, and genuinely useful. A fixed portion of income flows back to the community through Amana Fund's charity work (sadaqah jariyah).
+
+## Values
+
+- Faith-first: All products respect Islamic values and ethics.
+- Trust & privacy: Privacy-first design, no user tracking.
+- Excellence (Ihsan): Modern, reliable software built to a high standard.
+- For the Ummah: Real tools for real needs, with charity baked in.
+
+## Languages
+
+Available in English and Bangla (Bengali).
+
+## Contact
+
+Website: https://hidayasoft.com

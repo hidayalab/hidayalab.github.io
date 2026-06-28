@@ -1,11 +1,93 @@
+import { Helmet } from 'react-helmet-async'
 import { useLanguage } from '../contexts/LanguageContext'
+
+const HIFZQALB_LD = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://hidayasoft.com/hifzqalb#webpage',
+      url: 'https://hidayasoft.com/hifzqalb',
+      name: 'HifzQalb — Memorize the Qurʼan, Verse by Verse',
+      isPartOf: { '@id': 'https://hidayasoft.com/#website' },
+      description: 'HifzQalb is a free Quran memorization app using spaced repetition and active recall. Available on Android and web. No account required, works offline, no ads.',
+      inLanguage: ['en-US', 'bn-BD'],
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': 'https://hidayasoft.com/hifzqalb#app',
+      name: 'HifzQalb',
+      alternateName: 'HifzQalb - Quran Memorization',
+      applicationCategory: 'EducationApplication',
+      applicationSubCategory: 'Religious Education',
+      operatingSystem: 'Android, Web',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      description: 'A free Quran memorization companion that uses spaced repetition and active recall to help Muslims memorize and revise Quranic verses. No account required, works offline, no ads — free forever.',
+      url: 'https://hidayasoft.com/hifzqalb',
+      featureList: [
+        'Spaced repetition review',
+        'Active recall fill-in-the-blank',
+        'Guided paths: daily prayer surahs, Juz Amma, spiritual surahs, full hifz',
+        'Uthmani, Naskh and IndoPak scripts',
+        'Adjustable text size',
+        'Cream, sepia and night themes',
+        'Offline support',
+        'No account required',
+        'No ads, ever',
+      ],
+      author: { '@id': 'https://hidayasoft.com/#organization' },
+      publisher: { '@id': 'https://hidayasoft.com/#organization' },
+      inLanguage: ['en', 'bn', 'ar'],
+      isAccessibleForFree: true,
+      keywords: 'Quran memorization, hifz, Islamic app, free Quran app, spaced repetition, active recall',
+    },
+  ],
+}
 
 export default function HifzQalbPage() {
   const { t, language } = useLanguage()
   const isBangla = language === 'bn'
   const tq = t.hifzqalb
 
+  const title = isBangla
+    ? 'হিফজকলব — কুরআন মুখস্থ করুন আয়াত আয়াত করে | হিদায়াসফট'
+    : "HifzQalb — Memorize the Qurʼan, Verse by Verse | HidayaSoft"
+  const description = isBangla
+    ? 'হিফজকলব একটি বিনামূল্যের কুরআন হিফজ অ্যাপ যা স্পেসড রিপিটিশন ও অ্যাক্টিভ রিকল পদ্ধতি ব্যবহার করে। অ্যান্ড্রয়েড ও ওয়েবে পাওয়া যায়। কোনো অ্যাকাউন্ট লাগে না, অফলাইনে কাজ করে।'
+    : 'HifzQalb is a free Quran memorization app using spaced repetition and active recall. Available on Android and web. No account needed, no ads, works offline — free forever.'
+
   return (
+    <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content="HifzQalb, Quran memorization app, hifz app, Islamic app, free Quran app, spaced repetition Quran, memorize Quran, hifz helper, HidayaSoft" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hidayasoft.com/hifzqalb" />
+        <meta property="og:site_name" content="HidayaSoft" />
+        <meta property="og:title" content={isBangla ? 'হিফজকলব — কুরআন মুখস্থ করুন আয়াত আয়াত করে' : "HifzQalb — Memorize the Qurʼan, Verse by Verse"} />
+        <meta property="og:description" content={isBangla
+          ? 'বিনামূল্যের কুরআন হিফজ অ্যাপ — কোনো বিজ্ঞাপন নেই, কোনো অ্যাকাউন্ট লাগে না, অফলাইনে কাজ করে।'
+          : 'Free offline-ready Quran memorization — guided paths from daily prayer surahs to full hifz. No ads, no sign-up required.'
+        } />
+        <meta property="og:image" content="https://hidayasoft.com/logo.png" />
+        <meta property="og:image:alt" content="HifzQalb — Quran memorization app by HidayaSoft" />
+        <meta property="og:locale" content={isBangla ? 'bn_BD' : 'en_US'} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={isBangla ? 'হিফজকলব — কুরআন মুখস্থ করুন' : "HifzQalb — Memorize the Qurʼan"} />
+        <meta name="twitter:description" content={isBangla
+          ? 'বিনামূল্যের কুরআন হিফজ অ্যাপ — স্পেসড রিপিটিশন, অ্যাক্টিভ রিকল, অফলাইন।'
+          : 'Free Quran memorization — spaced repetition, active recall, offline, no ads.'
+        } />
+        <meta name="twitter:image" content="https://hidayasoft.com/logo.png" />
+        <meta name="twitter:image:alt" content="HifzQalb by HidayaSoft" />
+        <link rel="canonical" href="https://hidayasoft.com/hifzqalb" />
+        <link rel="alternate" href="https://hidayasoft.com/hifzqalb" hreflang="en" />
+        <link rel="alternate" href="https://hidayasoft.com/hifzqalb?lang=bn" hreflang="bn" />
+        <link rel="alternate" href="https://hidayasoft.com/hifzqalb" hreflang="x-default" />
+        <script type="application/ld+json">{JSON.stringify(HIFZQALB_LD)}</script>
+      </Helmet>
+
     <div className="pt-16 md:pt-[72px] min-h-screen bg-[#FAF6F1] dark:bg-ink-950 text-primary-900 dark:text-white transition-colors duration-300">
       <style>{`
         @keyframes wfloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
@@ -418,5 +500,6 @@ export default function HifzQalbPage() {
       </section>
 
     </div>
+    </>
   )
 }

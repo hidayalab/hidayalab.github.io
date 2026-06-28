@@ -2,46 +2,184 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
+    <!-- Favicon & app icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/logo-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
+    <link rel="manifest" href="/manifest.json" />
+
     <!-- Primary Meta Tags -->
     <title>HidayaSoft — Digital Solutions for the Ummah</title>
-    <meta name="title" content="HidayaSoft — Digital Solutions for the Ummah" />
     <meta name="description" content="HidayaSoft builds modern, faith-conscious digital solutions for the Ummah — from Amana Fund (interest-free microfinance) to HidayaERP, School Management, and HifzQalb. Part of our income supports charity through Amana Fund." />
     <meta name="keywords" content="HidayaSoft, Islamic software, Ummah technology, Amana Fund, Qard Hasan, microfinance, HidayaERP, school management system, HifzQalb, Quran memorization app, halal software" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="English" />
     <meta name="author" content="HidayaSoft" />
-    
-    <!-- Open Graph / Facebook -->
+    <meta name="application-name" content="HidayaSoft" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#059669" />
+    <meta name="msapplication-TileColor" content="#059669" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Mobile web app -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="HidayaSoft" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hidayasoft.com/" />
+    <meta property="og:site_name" content="HidayaSoft" />
     <meta property="og:title" content="HidayaSoft — Digital Solutions for the Ummah" />
     <meta property="og:description" content="Modern, faith-conscious software for the Ummah. Building Amana Fund, HidayaERP, School Management, and HifzQalb — with part of our income devoted to charity." />
     <meta property="og:image" content="https://hidayasoft.com/logo.png" />
-    <meta property="og:site_name" content="HidayaSoft" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://hidayasoft.com/" />
-    <meta property="twitter:title" content="HidayaSoft — Digital Solutions for the Ummah" />
-    <meta property="twitter:description" content="Modern, faith-conscious software for the Ummah. Building Amana Fund, HidayaERP, School Management, and Hifzul Qalb — with part of our income devoted to charity." />
-    <meta property="twitter:image" content="https://hidayasoft.com/logo.png" />
-    
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#059669" />
-    <meta name="msapplication-TileColor" content="#059669" />
-    
-    <!-- Canonical URL -->
+    <meta property="og:image:alt" content="HidayaSoft — Digital Solutions for the Ummah" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="bn_BD" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@HidayaSoft" />
+    <meta name="twitter:url" content="https://hidayasoft.com/" />
+    <meta name="twitter:title" content="HidayaSoft — Digital Solutions for the Ummah" />
+    <meta name="twitter:description" content="Modern, faith-conscious software for the Ummah. Building Amana Fund, HidayaERP, School Management, and HifzQalb — with part of our income devoted to charity." />
+    <meta name="twitter:image" content="https://hidayasoft.com/logo.png" />
+    <meta name="twitter:image:alt" content="HidayaSoft — Digital Solutions for the Ummah" />
+
+    <!-- Canonical & hreflang -->
     <link rel="canonical" href="https://hidayasoft.com/" />
     <link rel="alternate" href="https://hidayasoft.com/" hreflang="en" />
     <link rel="alternate" href="https://hidayasoft.com/?lang=bn" hreflang="bn" />
     <link rel="alternate" href="https://hidayasoft.com/" hreflang="x-default" />
-    
+
     <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Structured Data: Organization + WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://hidayasoft.com/#organization",
+          "name": "HidayaSoft",
+          "url": "https://hidayasoft.com",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://hidayasoft.com/#logo",
+            "url": "https://hidayasoft.com/logo.png",
+            "contentUrl": "https://hidayasoft.com/logo.png",
+            "caption": "HidayaSoft"
+          },
+          "image": { "@id": "https://hidayasoft.com/#logo" },
+          "description": "HidayaSoft is a faith-conscious software studio building modern digital solutions for the Muslim Ummah — from interest-free microfinance to Quran memorization apps.",
+          "slogan": "Technology with barakah & purpose",
+          "foundingDate": "2024",
+          "knowsAbout": ["Islamic software", "Quran memorization", "interest-free microfinance", "school management", "business ERP"],
+          "sameAs": []
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://hidayasoft.com/#website",
+          "url": "https://hidayasoft.com",
+          "name": "HidayaSoft",
+          "description": "Digital solutions for the Ummah — Islamic software built with faith and purpose.",
+          "publisher": { "@id": "https://hidayasoft.com/#organization" },
+          "inLanguage": ["en-US", "bn-BD"],
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://hidayasoft.com/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://hidayasoft.com/#webpage",
+          "url": "https://hidayasoft.com",
+          "name": "HidayaSoft — Digital Solutions for the Ummah",
+          "isPartOf": { "@id": "https://hidayasoft.com/#website" },
+          "about": { "@id": "https://hidayasoft.com/#organization" },
+          "description": "HidayaSoft builds modern, faith-conscious digital solutions for the Ummah — from Amana Fund (interest-free microfinance) to HidayaERP, School Management, and HifzQalb.",
+          "inLanguage": ["en-US", "bn-BD"]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: Products -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "HidayaSoft Products",
+      "description": "Software products by HidayaSoft for the Muslim Ummah",
+      "url": "https://hidayasoft.com/#products",
+      "numberOfItems": 4,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "@id": "https://hidayasoft.com/hifzqalb#app",
+            "name": "HifzQalb",
+            "applicationCategory": "EducationApplication",
+            "applicationSubCategory": "Religious Education",
+            "operatingSystem": "Android, Web",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "description": "A free Quran memorization companion using spaced repetition and active recall. Guided paths from daily prayer surahs to full hifz. No account required, works offline.",
+            "url": "https://hidayasoft.com/hifzqalb",
+            "isAccessibleForFree": true,
+            "author": { "@id": "https://hidayasoft.com/#organization" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Amana Fund",
+            "applicationCategory": "FinanceApplication",
+            "description": "Interest-free microfinance platform providing Qard Hasan loans to families in need. Management software and website built by HidayaSoft.",
+            "url": "https://www.amanafund.org/",
+            "author": { "@id": "https://hidayasoft.com/#organization" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "HidayaERP",
+            "applicationCategory": "BusinessApplication",
+            "description": "Business ERP software — inventory, customers, suppliers, purchases, sales and payments with a customized analytics dashboard.",
+            "author": { "@id": "https://hidayasoft.com/#organization" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "School Management System",
+            "applicationCategory": "EducationApplication",
+            "description": "Digital school management — teacher and student records, attendance, expenses, salary and tuition handling.",
+            "author": { "@id": "https://hidayasoft.com/#organization" }
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

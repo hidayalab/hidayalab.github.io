@@ -22,14 +22,22 @@ function AppContent() {
         <title>{t.seo.title}</title>
         <meta name="description" content={t.seo.description} />
         <meta name="keywords" content={t.seo.keywords} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={isBangla ? 'https://hidayasoft.com/?lang=bn' : 'https://hidayasoft.com/'} />
+        <meta property="og:site_name" content="HidayaSoft" />
         <meta property="og:title" content={t.seo.title} />
         <meta property="og:description" content={t.seo.description} />
+        <meta property="og:image" content="https://hidayasoft.com/logo.png" />
+        <meta property="og:image:alt" content="HidayaSoft — Digital Solutions for the Ummah" />
         <meta property="og:locale" content={isBangla ? 'bn_BD' : 'en_US'} />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t.seo.title} />
         <meta name="twitter:description" content={t.seo.description} />
+        <meta name="twitter:image" content="https://hidayasoft.com/logo.png" />
         <link rel="canonical" href={isBangla ? 'https://hidayasoft.com/?lang=bn' : 'https://hidayasoft.com/'} />
         <link rel="alternate" href="https://hidayasoft.com/" hreflang="en" />
         <link rel="alternate" href="https://hidayasoft.com/?lang=bn" hreflang="bn" />
+        <link rel="alternate" href="https://hidayasoft.com/" hreflang="x-default" />
       </Helmet>
       <Header />
       <main>
